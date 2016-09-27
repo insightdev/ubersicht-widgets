@@ -45,7 +45,7 @@ style: """
   top: auto
   right: auto
   bottom: 83%
-  left: 14%
+  left: 12%
   color: #fff
   color: rgba(255,255,255,0.5)
   font-family: Helvetica Neue

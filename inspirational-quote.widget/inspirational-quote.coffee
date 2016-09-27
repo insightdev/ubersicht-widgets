@@ -1,16 +1,16 @@
 command: 'curl -s "http://feeds.feedburner.com/brainyquote/QUOTEBR"'
 
-refreshFrequency: 30000
+refreshFrequency: '5h'
 
 style: """
   bottom: 22%
-  left: 6%
+  left: 5%
   color: rgba(255, 255, 255, 0.65)
   font-family: Helvetica Neue
+  max-width: 25%
 
 
   .output
-    width: 59%
     font-size: 24px
     font-weight: lighter
 	  font-smoothing: antialiased
