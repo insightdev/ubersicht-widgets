@@ -42,12 +42,12 @@ renderForecast: (data) ->
   """
 
 style: """
-  top: auto
+  top: 4%
   right: auto
-  bottom: 83%
+  bottom: auto
   left: 12%
   color: #fff
-  color: rgba(255,255,255,0.5)
+  color: rgba(255,255,255,0.7)
   font-family: Helvetica Neue
   text-align: left
   width: 400px
@@ -72,7 +72,7 @@ style: """
     vertical-align: middle
 
   .temp, .summary
-    padding-left: 160px
+    padding-left: 180px
 
   .temp
     font-weight: 200
@@ -105,7 +105,7 @@ style: """
     font-size: 30px
     line-height: 1.0
     color: #fff
-    color: rgba(255,255,255,0.4)
+    color: rgba(255,255,255,0.5)
 
   .forecast .entry
     display: inline-block
