@@ -3,7 +3,7 @@ apiKey   = '8774fcf6f5baa2403f5a27712afa0ba9'
 location = '47.6413,-122.3298'
 
 exclude  = "hourly,alerts,flags"
-command: "curl -s 'https://api.forecast.io/forecast/#{apiKey}/#{location}?units=auto&exclude=#{exclude}'"
+command: "curl -s 'https://api.forecast.io/forecast/#{apiKey}/#{location}?units=si&exclude=#{exclude}'"
 
 # Refresh every 60 seconds
 refreshFrequency: 60000
@@ -11,7 +11,7 @@ refreshFrequency: 60000
 render: (o) -> """
   <div class='weather'>
     <div class='icon'></div>
-    <div class='temp'></div>
+    <div class='temp'></div><br />
     <div class='summary'></div>
   </div>
 """
@@ -21,7 +21,7 @@ update: (output, domEl) ->
   $domEl = $(domEl)
 
   $domEl.find('.temp').html """
-    <div class='now'>#{Math.round(data.currently.apparentTemperature)}°</div>
+    <div class='now'>#{Math.round(data.currently.apparentTemperature)}°</div><br />
     <div class='hilow'>
         <div class='hi'>#{Math.round(data.daily.data[0].temperatureMax)}°</div>
         <div class='lo'>#{Math.round(data.daily.data[0].temperatureMin)}°</div>
@@ -103,6 +103,7 @@ style: """
   .summary
     float: clear
     font-size: 30px
+    margin-top: -30px
     line-height: 1.0
     color: #fff
     color: rgba(255,255,255,0.5)

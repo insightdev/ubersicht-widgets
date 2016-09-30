@@ -1,7 +1,7 @@
 style: """
   right: 0.3%
   top: 0%
-  width: 6.5%
+  width: 8.5%
   max-height: 400px
 
   .panel
